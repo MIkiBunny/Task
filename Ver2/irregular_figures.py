@@ -3,7 +3,7 @@ import math
 
 class polygon:
 
-    count  = 0
+    count  = 0 #needed to be able make +=
 
     def __init__(self, side, x, y):
         self.side = side
