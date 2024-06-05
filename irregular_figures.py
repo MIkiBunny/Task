@@ -33,7 +33,7 @@ def get_numeric_coord(prompt=""):
             print("Please enter a valid number.")
 
 
-def calculate_polygon (side, coorx,coory):
+def calculate_polygon (side, coorx, coory):
     """
     Calculate area and perimeter of any regular polygon
     
@@ -48,9 +48,9 @@ def calculate_polygon (side, coorx,coory):
     for i in range(side):
         nexti = (i + 1) % side  
         area += coorx[i] * coory[nexti] - coory[i] * coorx[nexti]
-        perimeter += abs((coorx[i] - coorx[nexti]) ** 2 + (coory[i] - coory[nexti]) ** 2)
+        perimeter += math.sqrt((coorx[i] - coorx[nexti]) ** 2 + (coory[i] - coory[nexti]) ** 2)
     area = round (abs(area)/2, 2)
-    perimeter = round (abs(math.sqrt(perimeter)), 2)
+    perimeter = round (abs(perimeter))
     return area, perimeter
 
 
